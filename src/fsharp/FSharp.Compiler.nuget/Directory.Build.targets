@@ -9,10 +9,20 @@
   <Import Project="$(MSBuildThisFileDirectory)..\Directory.Nuget.targets" />
 
   <ItemGroup>
-    <ProjectReference Include="..\fsc\fsc.fsproj" />
-    <ProjectReference Include="..\fsi\fsi.fsproj" />
-    <ProjectReference Include="..\FSharp.Build\FSharp.Build.fsproj" />
-    <ProjectReference Include="..\FSharp.Compiler.Interactive.Settings\FSharp.Compiler.Interactive.Settings.fsproj" />
+    <ProjectReference Include="..\fsc\fsc.fsproj">
+      <AdditionalProperties>TargetFramework=netcoreapp2.1</AdditionalProperties>
+    </ProjectReference>
+    <ProjectReference Include="..\fsi\fsi.fsproj">
+      <AdditionalProperties>TargetFramework=netcoreapp2.1</AdditionalProperties>
+    </ProjectReference>
+    <ProjectReference Include="..\FSharp.Build\FSharp.Build.fsproj">
+      <AdditionalProperties>TargetFramework=netstandard2.0</AdditionalProperties>
+    </ProjectReference>
+    <ProjectReference Include="..\FSharp.Compiler.Interactive.Settings\FSharp.Compiler.Interactive.Settings.fsproj">
+      <AdditionalProperties>TargetFramework=netstandard2.0</AdditionalProperties>
+    </ProjectReference>
   </ItemGroup>
+
+  <Target Name="Build" />
 
 </Project>

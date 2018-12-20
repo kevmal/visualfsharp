@@ -1,8 +1,9 @@
 <Project>
+
   <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
-  <Import Project="$(NuGetPackageRoot)\MicroBuild.Core\$(MicroBuildCorePackageVersion)\build\MicroBuild.Core.props" />
 
   <PropertyGroup>
+    <VisualStudioInsertionComponent>Microsoft.FSharp</VisualStudioInsertionComponent>
     <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
     <OutputArchitecture>neutral</OutputArchitecture>
     <OutputLocalized>false</OutputLocalized>
